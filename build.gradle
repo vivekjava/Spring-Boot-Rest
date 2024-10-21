@@ -36,7 +36,8 @@ dependencies {
 
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
 	testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
-	implementation "io.springfox:springfox-boot-starter:3.0.0"
+//	implementation "io.springfox:springfox-boot-starter:3.0.0"
+//	implementation "io.springfox:springfox-swagger-ui:3.0.0"
 }
 
 tasks.named('test') {
