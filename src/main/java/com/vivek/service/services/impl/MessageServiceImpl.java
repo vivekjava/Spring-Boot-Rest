@@ -5,9 +5,10 @@ import com.vivek.service.services.mapper.MessageMapper;
 import com.vivek.service.services.model.RequestMessage;
 import com.vivek.service.services.model.ResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-
+@Service
 public class MessageServiceImpl implements MessageService {
     @Autowired
     MessageMapper messageMapper;
