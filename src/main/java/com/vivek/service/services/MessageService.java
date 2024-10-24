@@ -7,5 +7,4 @@ import com.vivek.service.services.model.ResponseMessage;
 public interface MessageService {
     ResponseMessage mockMessage(RequestMessage requestMessage);
 
-    MessageDTO saveMessage(MessageDTO messageDTO);
 }

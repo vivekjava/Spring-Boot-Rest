@@ -1,7 +1,5 @@
 package com.vivek.service.services.impl;
 
-import com.vivek.service.domain.Message;
-import com.vivek.service.repository.MessageRepository;
 import com.vivek.service.services.MessageService;
 import com.vivek.service.services.dto.MessageDTO;
 import com.vivek.service.services.mapper.MessageMapper;
@@ -14,8 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 @Service
 public class MessageServiceImpl implements MessageService {
-    @Autowired
-    MessageRepository messageRepository;
+
     MessageMapper messageMapper ;
     public MessageServiceImpl(){
         messageMapper = new MessageMapperImpl();
@@ -27,11 +24,6 @@ public class MessageServiceImpl implements MessageService {
         return result;
     }
 
-    @Override
-    public MessageDTO saveMessage(MessageDTO messageDTO) {
-        Message message = messageRepository.save(messageMapper.toEntity(messageDTO));
-        return messageMapper.toDTO(message);
-    }
 
 
 }
