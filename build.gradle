@@ -3,7 +3,8 @@ plugins {
 	id 'org.springframework.boot' version '3.3.4'
 	id 'io.spring.dependency-management' version '1.1.6'
 }
-
+ext['kafka.version'] = '3.5.0'
+ext['spring-kafka.version'] = '3.3.0'
 group = 'com.vivek'
 version = '0.0.1-SNAPSHOT'
 
@@ -43,6 +44,11 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
 	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '3.3.4'
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
+	implementation 'org.springframework.kafka:spring-kafka'
+	// https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+	implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.16'
+
+
 }
 
 tasks.named('test') {
