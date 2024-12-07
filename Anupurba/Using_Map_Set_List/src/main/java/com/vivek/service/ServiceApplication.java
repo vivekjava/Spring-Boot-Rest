@@ -5,13 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({
-		"com.vivek.service.repository",
-		"com.vivek.service.rest",
-		"com.vivek.service.domain",
-		"com.vivek.service.services.impl",
-"com.vivek.service.consumers"})
-
+@ComponentScan({"com.vivek.service.repository","com.vivek.service.rest","com.vivek.service.domain","com.vivek.service.services.impl"})
 public class ServiceApplication {
 
 	public static void main(String[] args) {
