@@ -9,6 +9,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class CCReportsDTO {
-    private Long id;
+    private String id;
     private String transactionId;
+    private String bankApplicationStatus;
 }

@@ -1,4 +1,4 @@
-# Sample Spring Boot
+# Reporting Service
 
 ## Reference 
 
@@ -15,4 +15,14 @@ Build command
 
 ## Test API 
 
-`http://localhost:1996/message`
+`http://localhost:1996/status`
+
+## Swagger 
+
+1. Swagger Document can be viewed : http://localhost:1996/swagger-ui/index.html
+2. Swagger Document (Yaml) can be found here.( Online viewer https://editor.swagger.io/)
+3. Integration Document : https://springdoc.org/#google_vignette , https://www.baeldung.com/spring-rest-openapi-documentation
+
+## Async API 
+
+1. Async API Document can be found here docs/async.yaml. [Async API Viewer](https://studio.asyncapi.com/)

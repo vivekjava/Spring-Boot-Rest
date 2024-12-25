@@ -1,0 +1,21 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:1996
+  description: Generated server url
+paths:
+  /status:
+    get:
+      tags:
+      - status-resource
+      operationId: getMessage
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components: {}

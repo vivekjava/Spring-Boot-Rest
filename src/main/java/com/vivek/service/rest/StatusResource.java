@@ -1,5 +1,7 @@
 package com.vivek.service.rest;
 
+import com.vivek.service.domain.CCReports;
+import com.vivek.service.repository.CCReportsRepository;
 import com.vivek.service.services.impl.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +14,8 @@ import java.util.Map;
 
 @RestController
 public class StatusResource {
+    @Autowired
+    CCReportsRepository ccReportsRepository;
     @Autowired
     MessageServiceImpl messageService;
     @GetMapping("/status")
