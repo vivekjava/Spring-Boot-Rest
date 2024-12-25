@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+namespace: default
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app: {{ .Chart.Name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}
+    spec:
+        containers:
+        - name: "service1"
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "vivekjava/experimental:0.1"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
