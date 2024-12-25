@@ -1,0 +1,45 @@
+openapi: 3.0.1
+info:
+  title: Reporting Service
+  version: v0
+servers:
+  - url: http://localhost:1996
+    description: Generated server url
+paths:
+  /status:
+    get:
+      tags:
+        - status-resource
+      operationId: getMessage
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /cc-reports:
+    get:
+      tags:
+        - cc-report-resources
+      operationId: getCCReports
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CCReportsDTO"
+components:
+  schemas:
+    CCReportsDTO:
+      type: object
+      properties:
+        id:
+          type: string
+        transactionId:
+          type: string
+        bankApplicationStatus:
+          type: string
