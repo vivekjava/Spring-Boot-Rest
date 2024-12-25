@@ -5,6 +5,7 @@
 1. [Swagger](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
 2. [Mapstruct](https://www.baeldung.com/mapstruct)
 3. [lombok](https://projectlombok.org/)
+4. [AsyncAPI](https://www.asyncapi.com/)
 
 ## How to run
 
